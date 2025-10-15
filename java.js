@@ -199,4 +199,5 @@ console.log(`Su etapa de vida es: ${resultado.etapa}`);
 console.log(`Estado del Subsidio: ${resultado.subsidio}`);
 console.log('-----------------');*/
 
+function esPrimo(num) {}
 
