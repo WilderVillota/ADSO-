@@ -201,3 +201,4 @@ console.log('-----------------');*/
 
 function esPrimo(num) {}
 
+function listarPrimosHasta(limite) {}
