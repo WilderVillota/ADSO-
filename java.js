@@ -199,4 +199,87 @@ console.log(`Su etapa de vida es: ${resultado.etapa}`);
 console.log(`Estado del Subsidio: ${resultado.subsidio}`);
 console.log('-----------------');*/
 
+/*function esPrimo(num) {}
 
+function listarPrimosHasta(limite) {}*/
+
+const fruits = Array("Apple", "Banana", "Orange", "Mango")
+console.log(fruits)
+console.log(fruits.length)
+
+const wilder = Array(12)
+console.log(wilder)
+
+const numbers = Array(1,2,3,4,5)
+console.log(numbers)
+
+const unenumero = [6,'tres']
+console.log(unenumero)
+
+const recipeingredientes = [
+    'flour',
+    true,
+    2,
+    {
+        ingredientes: 'leche', cantidad: '1 litro'
+    },
+    false
+]
+console.log(recipeingredientes)
+
+fruits.push('Pineapple')
+console.log(fruits)
+//push(elemento) agrega un elemento al final del array
+
+const newfruits = fruits.concat(['Grapes', 'Strawberry'])
+console.log(newfruits)
+//concat(elemento1, elemento2) agrega uno o mas elementos al final del array y crea un nuevo array
+    
+console.log(Array.isArray(fruits))
+
+const numbersArray=[1,2,3,4,5]
+let sum = 0;
+for (const number of numbersArray) {
+    sum += number;
+}
+
+console.log(sum)
+
+const number=[2,1,5,4,3]
+
+//console.log(number.pop())
+//console.log(number.sort())
+
+//function compareNumbers(a, b) {
+  //  return a - b;
+//}
+//number.sort(compareNumbers)
+//console.log(number)
+//const ml = number.find((num) => num > 2)
+//console.log(number)
+
+const mt = (eleme) => eleme > 4
+console.log(number.findIndex(mt))
+
+const carrito =[
+    {producto: 'Libro', precio: 300},
+    {producto: 'Camisa', precio: 1500},
+    {producto: 'Guitarra', precio: 5000},
+    {producto: 'Disco', precio: 700},   
+]
+const resultado = carrito.reduce( (accomulator, elemento) => accomulator + elemento.precio, 0)
+console.log(resultado)
+console.log(carrito)
+
+const frutas = ['Banana', 'Apple', 'Banana', 'Mango', 'Pineapple','Apple','Banana']
+const frutaUnica = frutas.reduce((acumulador, elemento) => {
+    if (acumulador[elemento]) {
+        acumulador[elemento] ++
+    } else {
+        acumulador[elemento] = 1
+    }
+    return acumulador
+}, {})
+console.log(frutaUnica)
+
+    
