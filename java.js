@@ -258,7 +258,7 @@ const number=[2,1,5,4,3]
 //const ml = number.find((num) => num > 2)
 //console.log(number)
 
-const mt = (eleme) => eleme > 4
+/*const mt = (eleme) => eleme > 4
 console.log(number.findIndex(mt))
 
 const carrito =[
@@ -280,6 +280,25 @@ const frutaUnica = frutas.reduce((acumulador, elemento) => {
     }
     return acumulador
 }, {})
-console.log(frutaUnica)
+console.log(frutaUnica)*/
 
-    
+class Libro {
+    constructor(titulo, autor, paginas) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.paginas = paginas;
+    }
+
+    // Método que devuelve y concatena una cadena de información
+    informacion() {
+        return `El libro ${this.titulo} de ${this.autor} tiene ${this.paginas} páginas.`;
+    }
+}
+
+// Creación de objetos usando el constructor
+const libro1 = new Libro("Cien años de soledad", "Gabriel García Márquez", 417);
+const libro2 = new Libro("1984", "George Orwell", 328);
+
+// mostramos la información de los libros
+console.log(libro1)
+console.log(libro2)
