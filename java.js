@@ -258,7 +258,7 @@ const number=[2,1,5,4,3]
 //const ml = number.find((num) => num > 2)
 //console.log(number)
 
-const mt = (eleme) => eleme > 4
+/*const mt = (eleme) => eleme > 4
 console.log(number.findIndex(mt))
 
 const carrito =[
@@ -280,6 +280,104 @@ const frutaUnica = frutas.reduce((acumulador, elemento) => {
     }
     return acumulador
 }, {})
-console.log(frutaUnica)
+console.log(frutaUnica)*/
+
+class Libro {
+    constructor(titulo, autor, paginas) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.paginas = paginas;
+    }
+
+    // Método que devuelve y concatena una cadena de información
+    informacion() {
+        return `El libro ${this.titulo} de ${this.autor} tiene ${this.paginas} páginas.`;
+    }
+}
+
+// Creación de objetos usando el constructor
+const libro1 = new Libro("Cien años de soledad", "Gabriel García Márquez", 417);
+const libro2 = new Libro("1984", "George Orwell", 328);
+
+// mostramos la información de los libros
+console.log(libro1)
+console.log(libro2)
+
+class animal {
+    constructor(nombre, edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+    emitirSonido() {
+        console.log("El animal emite un sonido")
+    }
+}
+
+class perro extends animal {
+    constructor(nombre, edad , raza ) {
+        super(nombre, edad)
+        this.raza = raza 
+    }
+    emitirSonido() {
+        console.log("El perro ladra: ¡Guau Guau!")
+    }
+    correr() {
+        console.log(`${this.nombre} está corriendo`)
+    }
+    
+
+}
+
+const Perro1 = new perro("Rex", 5,"Labrador")
+console.log(Perro1)
+Perro1.emitirSonido()
+Perro1.correr()
+
+const usersDatabase = [
+    { username: "wilder",
+     password: "123" 
+    },
+
+    { username: "vanessa",
+    password: "234" 
+    },
+    { username: "herney", password: "321" }
+];
+
+const usersTimeLine = [
+    { username: "wilder", 
+    timeline: "Publicación de wilder"
+    },
+    { username: "vanessa", 
+    timeline: "Publicación de vanessa" 
+    },
+    { username: "herney", 
+    timeline: "Publicación de herney" 
+    }
+]
+const username = prompt("Ingrese su nombre de usuario:");
+const password = prompt("Ingrese su contraseña:");
 
     
+function usuarioExistente(username, password) {
+  for (let i = 0; i < usersDatabase.length; i++) {
+    if (
+      usersDatabase[i].username === username &&
+      usersDatabase[i].password === password
+    ) {
+      return true;
+    }
+  }
+  return false;
+}
+
+function signIn(username, password) {
+  if (usuarioExistente(username, password)) {
+    alert(`Bienvenido a tu cuenta ${username}`);
+    console.log(usersTimeline);
+  } else {
+    alert("Uuups, usuario o contraseÃ±a incorrectos!");
+  }
+}
+
+signIn(username, password);
