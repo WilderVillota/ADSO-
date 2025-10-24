@@ -282,7 +282,7 @@ const frutaUnica = frutas.reduce((acumulador, elemento) => {
 }, {})
 console.log(frutaUnica)*/
 
-class Libro {
+/*class Libro {
     constructor(titulo, autor, paginas) {
         this.titulo = titulo;
         this.autor = autor;
@@ -345,14 +345,14 @@ const usersDatabase = [
 ];
 
 const usersTimeLine = [
-    { username: "wilder", 
-    timeline: "Publicación de wilder"
+    { username: "nayibe", 
+    timeline:  "me gusta leer libros"
     },
-    { username: "vanessa", 
-    timeline: "Publicación de vanessa" 
+    { username: "maria", 
+    timeline: "soy muy risueña" 
     },
-    { username: "herney", 
-    timeline: "Publicación de herney" 
+    { username: "diana", 
+    timeline: "vienvenidos a mi papepleria" 
     }
 ]
 const username = prompt("Ingrese su nombre de usuario:");
@@ -381,3 +381,42 @@ function signIn(username, password) {
 }
 
 signIn(username, password);
+*/
+
+const foo = () => console.log("first");
+const bar = () => setTimeout(() => console.log("second"), 20000);
+const baz = () => console.log("third");
+
+foo();
+bar();
+baz();
+
+const promise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    let operationSuccessful = true; // Cambia esto a false para simular un error
+    if (operationSuccessful) {
+      resolve("¡Operación exitosa!");
+    } else {
+      reject("¡Ocurrió un error!");
+    }
+  }, 5000);
+});
+
+promise
+  .then((message) => {
+    console.log(message);
+  })
+  .catch((error) => {
+    console.error(error);
+});
+
+
+function fetchData() {
+    fetch('https://jsonplaceholder.typicode.com/posts')
+    .then((response) => response.json
+        ())
+        .then((data) => console.log(data))
+        .catch((error) => console.log(error));
+}
+
+fetchData();
