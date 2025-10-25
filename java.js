@@ -203,7 +203,7 @@ console.log('-----------------');*/
 
 function listarPrimosHasta(limite) {}*/
 
-const fruits = Array("Apple", "Banana", "Orange", "Mango")
+/*const fruits = Array("Apple", "Banana", "Orange", "Mango")
 console.log(fruits)
 console.log(fruits.length)
 
@@ -245,7 +245,7 @@ for (const number of numbersArray) {
 
 console.log(sum)
 
-const number=[2,1,5,4,3]
+const number=[2,1,5,4,3]*/
 
 //console.log(number.pop())
 //console.log(number.sort())
@@ -383,7 +383,7 @@ function signIn(username, password) {
 signIn(username, password);
 */
 
-const foo = () => console.log("first");
+/*const foo = () => console.log("first");
 const bar = () => setTimeout(() => console.log("second"), 20000);
 const baz = () => console.log("third");
 
@@ -419,4 +419,31 @@ function fetchData() {
         .catch((error) => console.log(error));
 }
 
-fetchData();
+fetchData();*/
+
+/*fetch("https://jsonplaceholder.typicode.com/posts")
+  .then((response) => response.json())
+  .then((data) => console.log(data));*/
+
+function sendHttpRequest(method, url, data) {
+    return fetch(url, {
+      method: method,
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }).then((response) => {
+      return response.json();
+    });
+  
+
+}
+
+async function fetchPosts() {
+    const responseData = await sendHttpRequest(
+        "GET",
+        "https://jsonplaceholder.typicode.com/posts"
+    );
+    console.log(responseData);
+}
+fetchPosts();
