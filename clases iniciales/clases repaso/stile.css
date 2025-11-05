@@ -1,14 +1,40 @@
-h1{
-
-    text-align: center;
-    color:darkorange
-}
-
-h2{
-    color:aqua;
+.titulo{
+    color:darkorange;
+    width: 340px;
+    height: 50px;
+    background-color: teal;
+    
 }
 
 label{
-    font-weight: bold;
-    color:darkgreen;
+    background-color:aqua;
+    width: 70px;
+    height: 30px;
+}
+
+input{
+    background-color:darkgreen;
+    width: 15px;
+    height: 10px;
+}
+button{
+    background-color: blueviolet;
+    width: 120px;
+    height: 50px;
+}
+
+#seleccionar-mascota{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.targeta-de-mokepon{
+    width: 100px;
+    height: 100px;
+    background: aquamarine;
+    padding: 10px;
+    box-sizing: border-box;
 }
