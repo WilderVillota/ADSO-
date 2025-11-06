@@ -51,6 +51,9 @@ function reiniciarJuego() {
 	let seccionSeleccionarAtaque = document.getElementById('seleccionar-ataque');
 	seccionSeleccionarAtaque.style.display = 'none';
 
+	let seleccionarMascotaEnemigo = document.getElementById('seleccionar-mascota');
+	seleccionarMascotaEnemigo.style.display = 'flex';
+
 	cambiarEstadoBotones(true);
 }
 
@@ -163,8 +166,11 @@ let spanMascotaEnemigo = document.getElementById("mascota-enemigo"); //
     spanMascotaEnemigo.innerHTML = 'Ratigueya'
   }
 
+    let seleccionarMascotaEnemigo = document.getElementById('seleccionar-mascota');
+	seleccionarMascotaEnemigo.style.display = 'none';
+
 	let seccionSeleccionarAtaque = document.getElementById('seleccionar-ataque');
-	seccionSeleccionarAtaque.style.display = 'block';
+	seccionSeleccionarAtaque.style.display = 'flex';
 
 	let seccionReiniciar = document.getElementById('reiniciar');
 	seccionReiniciar.style.display = 'block';
